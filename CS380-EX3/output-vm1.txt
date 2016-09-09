@@ -1,0 +1,172 @@
+eth13     Link encap:Ethernet  HWaddr 08:00:27:2a:93:4d  
+          inet addr:10.0.2.4  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fe2a:934d/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:140 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:162 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:39585 (39.5 KB)  TX bytes:19344 (19.3 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:62 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:62 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:5088 (5.0 KB)  TX bytes:5088 (5.0 KB)
+
+PING 10.0.2.5 (10.0.2.5) 56(84) bytes of data.
+64 bytes from 10.0.2.5: icmp_req=1 ttl=64 time=0.329 ms
+64 bytes from 10.0.2.5: icmp_req=2 ttl=64 time=0.330 ms
+64 bytes from 10.0.2.5: icmp_req=3 ttl=64 time=0.259 ms
+64 bytes from 10.0.2.5: icmp_req=4 ttl=64 time=0.259 ms
+64 bytes from 10.0.2.5: icmp_req=5 ttl=64 time=0.534 ms
+
+--- 10.0.2.5 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 3998ms
+rtt min/avg/max/mdev = 0.259/0.342/0.534/0.101 ms
+sniffex - Sniffer example using libpcap
+Copyright (c) 2005 The Tcpdump Group
+THERE IS ABSOLUTELY NO WARRANTY FOR THIS PROGRAM.
+
+Device: eth13
+Number of packets: 10
+Filter expression: ip
+
+Packet number 1:
+       From: 10.0.2.5
+         To: 10.0.2.4
+   Protocol: ICMP
+
+Packet number 2:
+       From: 10.0.2.4
+         To: 10.0.2.5
+   Protocol: ICMP
+
+Packet number 3:
+       From: 10.0.2.5
+         To: 10.0.2.4
+   Protocol: ICMP
+
+Packet number 4:
+       From: 10.0.2.4
+         To: 10.0.2.5
+   Protocol: ICMP
+
+Packet number 5:
+       From: 10.0.2.5
+         To: 10.0.2.4
+   Protocol: ICMP
+
+Packet number 6:
+       From: 10.0.2.4
+         To: 10.0.2.5
+   Protocol: ICMP
+
+Packet number 7:
+       From: 10.0.2.5
+         To: 10.0.2.4
+   Protocol: ICMP
+
+Packet number 8:
+       From: 10.0.2.4
+         To: 10.0.2.5
+   Protocol: ICMP
+
+Packet number 9:
+       From: 10.0.2.5
+         To: 10.0.2.4
+   Protocol: ICMP
+
+Packet number 10:
+       From: 10.0.2.4
+         To: 10.0.2.5
+   Protocol: ICMP
+
+Capture complete.
+sniffex - Sniffer example using libpcap
+Copyright (c) 2005 The Tcpdump Group
+THERE IS ABSOLUTELY NO WARRANTY FOR THIS PROGRAM.
+
+Device: eth13
+Number of packets: 10
+Filter expression: tcp
+
+Packet number 1:
+       From: 10.0.2.5
+         To: 10.0.2.4
+   Protocol: TCP
+   Src port: 32995
+   Dst port: 1
+
+Packet number 2:
+       From: 10.0.2.4
+         To: 10.0.2.5
+   Protocol: TCP
+   Src port: 1
+   Dst port: 32995
+
+Packet number 3:
+       From: 10.0.2.5
+         To: 10.0.2.4
+   Protocol: TCP
+   Src port: 38166
+   Dst port: 2
+
+Packet number 4:
+       From: 10.0.2.4
+         To: 10.0.2.5
+   Protocol: TCP
+   Src port: 2
+   Dst port: 38166
+
+Packet number 5:
+       From: 10.0.2.5
+         To: 10.0.2.4
+   Protocol: TCP
+   Src port: 40782
+   Dst port: 3
+
+Packet number 6:
+       From: 10.0.2.4
+         To: 10.0.2.5
+   Protocol: TCP
+   Src port: 3
+   Dst port: 40782
+
+Packet number 7:
+       From: 10.0.2.5
+         To: 10.0.2.4
+   Protocol: TCP
+   Src port: 56166
+   Dst port: 4
+
+Packet number 8:
+       From: 10.0.2.4
+         To: 10.0.2.5
+   Protocol: TCP
+   Src port: 4
+   Dst port: 56166
+
+Packet number 9:
+       From: 10.0.2.5
+         To: 10.0.2.4
+   Protocol: TCP
+   Src port: 38609
+   Dst port: 5
+
+Packet number 10:
+       From: 10.0.2.4
+         To: 10.0.2.5
+   Protocol: TCP
+   Src port: 5
+   Dst port: 38609
+
+Capture complete.
+
+[02/11/2016 20:25] seed@ubuntu:~$ cd Desktop
+[02/11/2016 20:25] seed@ubuntu:~/Desktop$ ls
+Gedit.desktop  hello.txt   Netwag.desktop  Wireshark.desktop
+Ghex.desktop   libcap2.22  Pacgen-1.10
+

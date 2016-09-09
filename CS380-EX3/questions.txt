@@ -1,0 +1,43 @@
+try 
+$ ./sniffex eth13
+
+doesn't work because we do not have admin privilege
+
+
+when we change filter_exp[] = "tcp"
+
+sniffer doesn't catch anything because packets are in ICMP not TCP
+
+
+
+wireshark
+
+while wireshark was running on vm1, vm2 connected using telnet
+
+wireshark then began capturing all the keystrokes from vm2
+
+and when right click and select "Follow TCP stream" it shows you
+
+everything that was on the vm2's terminal which was frightening
+
+it speaks for itself the security of using telnet as a method of
+
+remotely using a system
+
+
+
+for the second test, we used ssh(Secure SHell) which also allows
+
+remote login to a system. when we connect, wireshark begins capturing
+
+all the packets; however, this time all the packets are encrypted.
+
+when we select "Follow TCP stream", instead of showing what was exactly
+
+in vm2's terminal, it showed the names of the different cryptographic 
+
+algorithms used (diffie hellman, rsa, etc) and it also showed the
+
+encrypted data symbols. the security of ssh was leaps and bounds
+
+ahead of telnet. i do not know why anybody would use telnet.

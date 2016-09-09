@@ -1,0 +1,16 @@
+Trying 10.0.2.4...
+Connected to 10.0.2.4.
+Escape character is '^]'.
+Ubuntu 12.04.2 LTS
+ubuntu login: 
+
+[02/11/2016 20:23] seed@ubuntu:~$ cd Desktop
+[02/11/2016 20:23] seed@ubuntu:~/Desktop$ touch hello.txt
+[02/11/2016 20:23] seed@ubuntu:~/Desktop$ ls
+Gedit.desktop  hello.txt   Netwag.desktop  Wireshark.desktop
+Ghex.desktop   libcap2.22  Pacgen-1.10
+[02/11/2016 20:23] seed@ubuntu:~/Desktop$ exit
+logout
+Connection closed by foreign host.
+
+

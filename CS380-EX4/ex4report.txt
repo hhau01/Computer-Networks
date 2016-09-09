@@ -1,0 +1,74 @@
+EXCERCISE 4
+PROGRAMMERS: RICHARD idigo HENRY au
+Professor Pantic
+CS 380
+
+LOG IN As TED WITHOUT PASSWORD
+-----------------------------
+the goal for this excercise was to use sql injection to log on to the server as one of the users
+to mimic an attack by a hacker. My process for this was that I needed the query that is to be ran to
+return true, specifically the row including ted's username and password. To make this happen, I knew i needed to alter 
+what the query did. So i though the best thing to do would be get the code to ignore the code after the user input, that way
+instead of the following:
+
+$sel1 = mysql_query(
+"SELECT ID, name, locale, lastlogin, gender
+FROM USERS_TABLE
+WHERE (name = '$user' OR email = '$user') AND pass = '$pass'")
+
+the query would get this
+
+The code for logging in looks something like the following:
+$sel1 = mysql_query(
+"SELECT ID, name, locale, lastlogin, gender
+FROM USERS_TABLE
+WHERE (name = '$user' )
+
+my plan of attack, enter the value i need, but get sql to ignore the rest of the code.
+so i used this " ted') -- "
+
+what this does is enters ted, but the ' ends the user field input, and the ) closes the where statement
+finally the -- is sql way of commenting out code. So this is the way to get the server to just look for ted 
+and ignore the password part
+
+
+LOG IN As ADMIN WITHOUT PASSWORD
+-----------------------------
+the same process as above but using admin in place of ted
+
+
+
+
+LOG IN AS WITHOUT USERNAME AND PASSWORD
+---------------------------------------------
+after being able to login as the admin as well as ted without pass, the next task was to be able to login without 
+entering a name in the username field. 
+
+the process is similar, need to knockout the rest of the query involving the password field. However instead of entering 
+the name of the user i am trying to login as, I didnt enter any name. This is what i wrote: ') -- or 1=1
+
+what happens is like before the ') closes the username input and the where comment respectively, but the added or 1=1 turns the statement
+into an or statement saying to select where '' or 1=1, this will return true because 1 will always equal 1; and ofcourse the -- comments out the
+rest of the query. 
+
+Now the interesting part is how the statement returned admin eventhough admin was not named in the username. it turns out that the query i passed in will
+return the first record in the database, which in this case happens to be the admin account. otherwise if ted was first then ted would have been logged in
+
+EXTRA CREDIT
+------------------------------------------
+The extra credit was to login as ted , but somehow be able to change the alice's password.I was able to figure out the sql injections as
+well as how to go aboujt doing so, but just could not get the correct injection in time. 
+
+so after looking in the class.user.php i noticed something:
+mysqli_real_escape_string()
+alot of the values in the file were passed into this function. it turns out this function is meant to search for certain special characters in the string , and escapse them. meaning to disregard them. one of these characters happened to be the ', what I used for my previous injections. So this would prevent me from using any of my old tricks on this one. However there was one field, the company name field that didnt have this
+mysqli_real_escape_string(),
+therefore I knew this would be where my injection would go.
+
+now the next step is to understand that the update statement is updating all these values one by one. my job would be to use the company field to change the password of alice and knockout the rest of the sql statement like before.
+
+so i tried different variations of this with no results.
+
+', pass= "gotcha" WHERE name='alice' --
+
+but all these variations didnt work, i understand what needs to be done and i was atleast able to find the injection, but I couldnt come up with the right syntax in time.
