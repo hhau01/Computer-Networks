@@ -1,8 +1,6 @@
 # Computer-Networks
 Projects from my favorite class in college :+1: 
 
-_PDF instructions included._
-
 [Project 1: PhysLayerClient](https://github.com/hhau01/Computer-Networks/blob/master/CS380-P1/PhysLayerClient.java) 
 
 [Project 2: ChatClient](https://github.com/hhau01/Computer-Networks/blob/master/CS380-P2/ChatClient.java)
@@ -18,3 +16,5 @@ _PDF instructions included._
 [Project 7: TicTacToeClient](https://github.com/hhau01/Computer-Networks/blob/master/CS380-P7/TicTacToeClient.java)
 
 [Project 8: SecureFileTransfer](https://github.com/hhau01/File-Transfer)
+
+_*PDF instructions included._
