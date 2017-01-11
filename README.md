@@ -1,5 +1,7 @@
 # Computer-Networks
-Projects from my favorite class in college :+1: PDF instructions included.
+Projects from my favorite class in college :+1: 
+
+_PDF instructions included._
 
 [Project 1: PhysLayerClient](https://github.com/hhau01/Computer-Networks/blob/master/CS380-P1/PhysLayerClient.java) 
 
